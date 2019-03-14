@@ -1,0 +1,15 @@
+
+
+<div class="container">
+    <div class="row justify-content-md-center" style="margin-bottom:0% ">
+      <div class="col-lg-12">Total lanes : {{lanes.length}} lanes</div>
+      <div *ngFor="let  lane of lanes" class= col col-lg-4>
+       <ul class="list-group">
+         <li class="list-group-item">
+          {{lane | uppercase }}
+          <span class="badge badge-pill badge-dark">0</span>
+         </li>
+       </ul>
+      </div>
+    </div>
+  </div>
