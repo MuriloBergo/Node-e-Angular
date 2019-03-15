@@ -1,15 +1,22 @@
-
-
 <div class="container">
-    <div class="row justify-content-md-center" style="margin-bottom:0% ">
-      <div class="col-lg-12">Total lanes : {{lanes.length}} lanes</div>
-      <div *ngFor="let  lane of lanes" class= col col-lg-4>
-       <ul class="list-group">
-         <li class="list-group-item">
-          {{lane | uppercase }}
-          <span class="badge badge-pill badge-dark">0</span>
-         </li>
-       </ul>
-      </div>
+  <div class="row justify-content-md-left mb-2">
+    <div class="col col-lg-12">
+        Total lanes: {{ lanes.length }}
     </div>
   </div>
+  <div class="row justify-content-md-center">
+    <div *ngFor="let lane of lanes" class="col col-lg-4">
+      <ul class="list-group mb-lg-2">
+        <li class="list-group-item">
+          {{ lane.title | uppercase }}
+          <span class="badge badge-pill badge-dark">{{ lane.cards?.length || '0'}}</span>
+        </li>
+      </ul>
+        <app-card *ngFor="let card of lane.cards cards"
+        [title]="card.name"
+        [created]="card.created"
+        [description]="card.description"></app-card>
+
+    </div>
+  </div>
+</div>

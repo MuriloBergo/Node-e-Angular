@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Lane} from '../lane';
+import {Card} from '../card';
 
 @Component({
   selector: 'app-lanes',
@@ -7,7 +9,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LanesComponent implements OnInit {
 
-  @Input() lanes: string[];
+
+  @Input() lanes: Lane[] = [];
+  @Input() cards: Card[] = [];
+
   constructor() { }
 
   ngOnInit() {

@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MomentModule} from 'angular2-moment';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +10,7 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { LanesComponent } from './lanes/lanes.component';
 import { HomeComponent } from './home/home.component';
 import { HelpComponent } from './help/help.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -16,10 +19,12 @@ import { HelpComponent } from './help/help.component';
     JumbotronComponent,
     LanesComponent,
     HomeComponent,
-    HelpComponent
+    HelpComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
+    MomentModule,
     AppRoutingModule
   ],
   providers: [],
